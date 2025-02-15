@@ -76,14 +76,20 @@ Now you can login to your vm with "ssh your-vm" (or however you called the Host 
 
 There is a really good guide on how to install Docker on [https://docs.docker.com/engine/install/debian/](https://docs.docker.com/engine/install/debian/). Make sure you do the postinstall stuff [here](https://docs.docker.com/engine/install/linux-postinstall/) as well.
 
+## Step 6: Add docker alias to your ~/.zshrc or ~/.bashrc
+
+Last one is a easy one. In your "~/.zshrc" add the line alias docker="ssh docker docker"
+<img width="1378" alt="image" src="https://github.com/user-attachments/assets/e14d9b69-88f7-4801-9bdf-e2597e9621aa" />
+Now do "source ~/.zshrc".
+When you have done the last stepe you can now test your setup with with "docker run hello-world"
+<img width="1378" alt="image" src="https://github.com/user-attachments/assets/2b36d49b-a78c-4c9a-a519-42d922abf821" />
+
 <footer>
 
 <!--
   <<< Author notes: Footer >>>
   Add a link to get support, GitHub status page, code of conduct, license link.
 -->
-
----
 
 
 </footer>
