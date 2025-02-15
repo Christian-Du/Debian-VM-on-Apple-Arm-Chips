@@ -52,7 +52,26 @@ next you will see the editor window for your cron jobs. Add the line "@reboot su
 
 With that changes done you shoul be able to access your VM after a reboot from your Mac Terminal. 
 
-## Step 4:
+## Step 4: Set up Ssh to login without user interaction
+
+Start your terminal on your Mac and cd into your  ~/.ssh/ .
+Generate a ssh key with "ssh-keygen -f your-vm-key". In this case it dosn't matter what algorythm you use to generate the key. If you are up to use your outside just your physical machine it's worth reading [this](https://www.ssh.com/academy/ssh/keygen#choosing-an-algorithm-and-key-size).
+Now let's add the key we just generated to the VM. You still have to be in your ~/.ssh/ folder, then type "ssh-copy-id -p 2222 -i your-vm-key christian@127.0.0.1" enter the password for your vm and with that you added the key to your machine.
+<img width="1336" alt="image" src="https://github.com/user-attachments/assets/130ae25a-4a92-49c1-9223-013c98f48a91" />
+
+Next we will conifigure your ssh on your Mac. Still in your ~/.shh folder edit the config file with "nano config" and add the folowing entry:
+
+Host your-vm
+   HostName 127.0.0.1
+   User christian # make sure to use your VM username
+   Port 2222
+   IdentityFile ~/.ssh/your-vm-key
+
+save and exit.
+
+Now you can login to your vm with "ssh your-vm" (or however you called the Host in your ~/.ssh/config)
+<img width="1376" alt="image" src="https://github.com/user-attachments/assets/4b32dac4-b0fa-479a-bc85-cd415759dc0e" />
+
 
 <footer>
 
