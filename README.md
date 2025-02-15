@@ -72,6 +72,9 @@ save and exit.
 Now you can login to your vm with "ssh your-vm" (or however you called the Host in your ~/.ssh/config)
 <img width="1376" alt="image" src="https://github.com/user-attachments/assets/4b32dac4-b0fa-479a-bc85-cd415759dc0e" />
 
+## Step 5: Install Docker
+
+There is a really good guide on how to install Docker on [https://docs.docker.com/engine/install/debian/](https://docs.docker.com/engine/install/debian/). Make sure you do the postinstall stuff [here](https://docs.docker.com/engine/install/linux-postinstall/) as well.
 
 <footer>
 
