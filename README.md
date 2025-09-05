@@ -67,10 +67,10 @@ Type `sudo crontab -e` (make sure you are doing it with sudo), pick the editor o
 
 <img width="1377" alt="image" src="https://github.com/user-attachments/assets/7cae442f-5c54-4b99-a01d-065bd6bfe521" />
 
-Next, you will see the editor window for your cron jobs. Add the line:
+Next, you will see the editor window for your cron jobs. Add the line (I noticed in frequent usage that it's helpfull to go with both networkadapters):
 
 ```bash
-@reboot sudo ip link set enp0s2 up && sudo dhclient enp0s2
+@reboot sudo ip link set enp0s1 up && sudo dhclient enp0s1 && sudo ip link set enp0s2 up && sudo dhclient enp0s2
 ```
 
 And save.
